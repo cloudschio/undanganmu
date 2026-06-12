@@ -111,3 +111,21 @@ openInviteBtn.addEventListener('click',async()=>{
   }catch(e){}
   opening.classList.add('hide')
 });
+const opening = document.getElementById('opening');
+const openInviteBtn = document.getElementById('openInviteBtn');
+
+openInviteBtn.addEventListener('click', async () => {
+  try {
+    await bgMusic.play();
+    musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+  } catch (e) {}
+
+  opening.style.opacity = '0';
+  opening.style.visibility = 'hidden';
+  opening.style.pointerEvents = 'none';
+
+  setTimeout(() => {
+    opening.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }, 300);
+});
