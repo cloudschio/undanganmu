@@ -74,3 +74,13 @@
 .envelope-flap{z-index:4}
 .opening.hide{z-index:-1}
 .opening{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:20px;background:linear-gradient(180deg,rgba(58,16,16,.88),rgba(58,16,16,.95)),radial-gradient(circle at top left,rgba(202,162,75,.16),transparent 30%),radial-gradient(circle at bottom right,rgba(107,31,31,.14),transparent 30%);pointer-events:auto;transition:opacity .6s ease,visibility .6s ease}.opening.hide{opacity:0;visibility:hidden;pointer-events:none}.opening-card-simple{width:min(520px,100%);text-align:center;padding:28px 22px;border-radius:28px;background:rgba(255,250,242,.96);border:1px solid rgba(202,162,75,.22);box-shadow:0 24px 60px rgba(0,0,0,.18);backdrop-filter:blur(10px);pointer-events:auto;z-index:10001}.opening-label{letter-spacing:4px;text-transform:uppercase;color:var(--secondary);font-size:.78rem;font-weight:700;margin-bottom:10px}.opening-card-simple h1{font-family:'Cinzel',serif;font-size:clamp(2rem,8vw,3.5rem);line-height:.95;color:var(--primary);margin-bottom:12px}.opening-card-simple h1 span{color:var(--secondary)}.opening-text{color:var(--muted);margin-bottom:18px;font-size:.98rem}.open-invite-btn{min-width:180px}.open-invite-btn,.opening-card-simple button{pointer-events:auto}@media (max-width:480px){.opening-card-simple{padding:22px 16px}.open-invite-btn{width:100%}}
+.opening.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+body {
+  overflow: hidden;
+}
