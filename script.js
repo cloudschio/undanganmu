@@ -60,6 +60,7 @@ function sendRSVP(e) {
   const name = document.getElementById("rsvpName").value.trim();
   const attend = document.getElementById("rsvpAttend").value;
   const guest = document.getElementById("rsvpGuest").value;
+  const message = document.getElementById("rsvpMessage").value.trim();
 
   if (!name || !attend) {
     alert("Harap isi nama dan konfirmasi kehadiran terlebih dahulu.");
@@ -72,12 +73,13 @@ function sendRSVP(e) {
     mungkin: "🤔 Mungkin Hadir"
   }[attend];
 
-  const message =
+  const waMessage =
     `Halo, saya ingin konfirmasi kehadiran:%0A%0A` +
     `👤 Nama: ${encodeURIComponent(name)}%0A` +
     `📋 Status: ${encodeURIComponent(attendText)}%0A` +
-    `👥 Jumlah tamu: ${guest || 1}%0A%0A` +
-    `Terima kasih 🙏`;
+    `👥 Jumlah tamu: ${guest || 1}%0A` +
+    (message ? `💬 Ucapan: ${encodeURIComponent(message)}%0A` : "") +
+    `%0ATerima kasih 🙏`;
 
-  window.open(`https://wa.me/6281234567890?text=${message}`, "_blank");
+  window.open(`https://wa.me/6281234567890?text=${waMessage}`, "_blank");
 }
