@@ -462,3 +462,66 @@ body {
   opacity: 0.9;
   transform: translateY(-2px);
 }
+/* ===== LOKASI ===== */
+.lokasi {
+  padding: 30px 0 10px;
+  text-align: center;
+}
+
+.lokasi h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--gold-soft);
+  margin-bottom: 18px;
+}
+
+.lokasi-info {
+  text-align: left;
+  line-height: 2;
+}
+
+.maps-preview {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(217, 179, 106, 0.6);
+  margin: 14px 0;
+  box-shadow: var(--shadow);
+}
+
+.maps-preview iframe {
+  display: block;
+  width: 100%;
+  height: 220px;
+}
+
+.maps-btn {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ===== RSVP TEXTAREA ===== */
+.rsvp-form textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(217, 179, 106, 0.6);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.rsvp-form textarea::placeholder {
+  color: rgba(255, 248, 235, 0.45);
+}
+
+.rsvp-form textarea:focus {
+  border-color: var(--gold);
+}
