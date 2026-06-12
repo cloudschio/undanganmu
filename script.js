@@ -54,3 +54,30 @@ musicToggle.addEventListener("click", async () => {
     musicToggle.textContent = "♫ Musik";
   }
 });
+function sendRSVP(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("rsvpName").value.trim();
+  const attend = document.getElementById("rsvpAttend").value;
+  const guest = document.getElementById("rsvpGuest").value;
+
+  if (!name || !attend) {
+    alert("Harap isi nama dan konfirmasi kehadiran terlebih dahulu.");
+    return;
+  }
+
+  const attendText = {
+    hadir: "✅ Hadir",
+    tidak: "❌ Tidak Hadir",
+    mungkin: "🤔 Mungkin Hadir"
+  }[attend];
+
+  const message =
+    `Halo, saya ingin konfirmasi kehadiran:%0A%0A` +
+    `👤 Nama: ${encodeURIComponent(name)}%0A` +
+    `📋 Status: ${encodeURIComponent(attendText)}%0A` +
+    `👥 Jumlah tamu: ${guest || 1}%0A%0A` +
+    `Terima kasih 🙏`;
+
+  window.open(`https://wa.me/6281234567890?text=${message}`, "_blank");
+}
