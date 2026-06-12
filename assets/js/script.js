@@ -90,3 +90,15 @@ openInviteBtn.addEventListener('click', async () => {
     musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
   } catch (e) {}
 });
+const opening=document.getElementById('opening');
+const envelopeScene=document.getElementById('envelopeScene');
+const openInviteBtn=document.getElementById('openInviteBtn');
+
+openInviteBtn.addEventListener('click',async()=>{
+  envelopeScene.classList.add('open');
+  try{
+    await bgMusic.play();
+    musicBtn.innerHTML='<i class="fa-solid fa-volume-high"></i>'
+  }catch(e){}
+  setTimeout(()=>{opening.classList.add('hide')},1400)
+});
