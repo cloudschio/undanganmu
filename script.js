@@ -27,6 +27,19 @@ function updateCountdown() {
   minutesEl.textContent = String(minutes).padStart(2, "0");
   secondsEl.textContent = String(seconds).padStart(2, "0");
 }
+const musicToggle = document.getElementById("musicToggle");
+const bgMusic = document.getElementById("bgMusic");
 
+musicToggle.addEventListener("click", async () => {
+  if (bgMusic.paused) {
+    try {
+      await bgMusic.play();
+      musicToggle.textContent = "❚❚ Musik";
+    } catch (e) {}
+  } else {
+    bgMusic.pause();
+    musicToggle.textContent = "♫ Musik";
+  }
+});
 updateCountdown();
 setInterval(updateCountdown, 1000);
