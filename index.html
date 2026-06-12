@@ -4,55 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Undangan Digital | Raisa & Hamis</title>
-  <meta name="description" content="Undangan digital pernikahan elegan nuansa emas." />
+  <meta name="description" content="Undangan digital pernikahan Raisa & Hamis." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="overlay"></div>
 
-  <button id="musicToggle" class="music-btn">♫ Musik</button>
-<audio id="bgMusic" loop>
-  <source src="assets/music.mp3" type="audio/mpeg" />
-</audio>
-    <section class="hero" id="home">
-      <div class="ornament top-ornament">❁ ❀ ❁</div>
+  <div id="cover" class="cover">
+    <div class="cover-card">
+      <p>Undangan Pernikahan</p>
+      <h2>Raisa & Hamis</h2>
+      <button id="openInvite" class="open-invite-btn">Buka Undangan</button>
+    </div>
+  </div>
 
+  <button id="musicToggle" class="music-btn">♫ Musik</button>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="invitation">
+    <div class="corner-gunungan corner-gunungan-left" aria-hidden="true">
+      <svg viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ornamen gunungan Jawa">
+        <defs>
+          <linearGradient id="gOldLeft" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fff0c9"/>
+            <stop offset="35%" stop-color="#f0d18a"/>
+            <stop offset="100%" stop-color="#b57d28"/>
+          </linearGradient>
+          <linearGradient id="gShadeLeft" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6dd" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#c99643" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(110 140)">
+          <path d="M0 -118 C 34 -88 58 -56 58 -18 C 58 42 35 92 0 126 C -35 92 -58 42 -58 -18 C -58 -56 -34 -88 0 -118Z" fill="url(#gOldLeft)" stroke="#8d5e18" stroke-width="3.2" stroke-linejoin="round"/>
+          <path d="M0 -98 C 22 -78 38 -52 38 -18 C 38 28 24 64 0 94 C -24 64 -38 28 -38 -18 C -38 -52 -22 -78 0 -98Z" fill="none" stroke="url(#gShadeLeft)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M0 -78 C 13 -66 24 -48 24 -28 C 24 2 16 28 0 48 C -16 28 -24 2 -24 -28 C -24 -48 -13 -66 0 -78Z" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M0 -104 C 16 -92 29 -78 39 -60" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M0 -104 C -16 -92 -29 -78 -39 -60" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M0 -72 C 16 -63 31 -49 42 -32" fill="none" stroke="#8d5e18" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M0 -72 C -16 -63 -31 -49 -42 -32" fill="none" stroke="#8d5e18" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M-24 -26 C -10 -36 10 -36 24 -26" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-30 -5 C -14 -14 14 -14 30 -5" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-24 16 C -10 8 10 8 24 16" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-36 48 C -20 36 20 36 36 48" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-27 68 C -14 60 14 60 27 68" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="0" cy="-40" r="3.2" fill="#8d5e18"/>
+          <circle cx="0" cy="-15" r="2.8" fill="#8d5e18"/>
+          <circle cx="0" cy="10" r="2.6" fill="#8d5e18"/>
+          <circle cx="0" cy="34" r="2.4" fill="#8d5e18"/>
+          <path d="M-8 98 C -3 106 3 106 8 98" fill="none" stroke="#8d5e18" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M-16 110 C -8 116 8 116 16 110" fill="none" stroke="#8d5e18" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="corner-gunungan corner-gunungan-right" aria-hidden="true">
+      <svg viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ornamen gunungan Jawa">
+        <defs>
+          <linearGradient id="gOldRight" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fff0c9"/>
+            <stop offset="35%" stop-color="#f0d18a"/>
+            <stop offset="100%" stop-color="#b57d28"/>
+          </linearGradient>
+          <linearGradient id="gShadeRight" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6dd" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#c99643" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(110 140)">
+          <path d="M0 -118 C 34 -88 58 -56 58 -18 C 58 42 35 92 0 126 C -35 92 -58 42 -58 -18 C -58 -56 -34 -88 0 -118Z" fill="url(#gOldRight)" stroke="#8d5e18" stroke-width="3.2" stroke-linejoin="round"/>
+          <path d="M0 -98 C 22 -78 38 -52 38 -18 C 38 28 24 64 0 94 C -24 64 -38 28 -38 -18 C -38 -52 -22 -78 0 -98Z" fill="none" stroke="url(#gShadeRight)" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M0 -78 C 13 -66 24 -48 24 -28 C 24 2 16 28 0 48 C -16 28 -24 2 -24 -28 C -24 -48 -13 -66 0 -78Z" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M0 -104 C 16 -92 29 -78 39 -60" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M0 -104 C -16 -92 -29 -78 -39 -60" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M0 -72 C 16 -63 31 -49 42 -32" fill="none" stroke="#8d5e18" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M0 -72 C -16 -63 -31 -49 -42 -32" fill="none" stroke="#8d5e18" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M-24 -26 C -10 -36 10 -36 24 -26" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-30 -5 C -14 -14 14 -14 30 -5" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-24 16 C -10 8 10 8 24 16" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-36 48 C -20 36 20 36 36 48" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <path d="M-27 68 C -14 60 14 60 27 68" fill="none" stroke="#8d5e18" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="0" cy="-40" r="3.2" fill="#8d5e18"/>
+          <circle cx="0" cy="-15" r="2.8" fill="#8d5e18"/>
+          <circle cx="0" cy="10" r="2.6" fill="#8d5e18"/>
+          <circle cx="0" cy="34" r="2.4" fill="#8d5e18"/>
+          <path d="M-8 98 C -3 106 3 106 8 98" fill="none" stroke="#8d5e18" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M-16 110 C -8 116 8 116 16 110" fill="none" stroke="#8d5e18" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <section class="hero" id="home">
+      <div class="ornament">❁ ❀ ❁</div>
       <div class="emblem-wrap">
         <div class="emblem">✦</div>
         <p class="label">THE WEDDING OF</p>
       </div>
-
-      <h1 class="couple">Chio &amp; Pasangan</h1>
-
+      <h1 class="couple">Raisa &amp; Hamis</h1>
       <p class="subtitle">
         Kami akan menikah,<br />
         dan kami ingin Anda menjadi bagian dari hari istimewa kami.
       </p>
 
       <section class="countdown-section">
-        <div class="countdown-box">
-          <span id="days">00</span>
-          <small>Hari</small>
-        </div>
-        <div class="countdown-box">
-          <span id="hours">00</span>
-          <small>Jam</small>
-        </div>
-        <div class="countdown-box">
-          <span id="minutes">00</span>
-          <small>Menit</small>
-        </div>
-        <div class="countdown-box">
-          <span id="seconds">00</span>
-          <small>Detik</small>
-        </div>
+        <div class="countdown-box"><span id="days">00</span><small>Hari</small></div>
+        <div class="countdown-box"><span id="hours">00</span><small>Jam</small></div>
+        <div class="countdown-box"><span id="minutes">00</span><small>Menit</small></div>
+        <div class="countdown-box"><span id="seconds">00</span><small>Detik</small></div>
       </section>
 
       <p class="event-date">Sabtu, 09 Januari 2027</p>
-
       <a class="open-btn" href="#detail">Lihat Undangan</a>
     </section>
 
@@ -64,50 +131,48 @@
         <p>08.00 WIB</p>
         <p>Balai Pertemuan Surabaya</p>
       </div>
-
       <div class="card">
         <p><strong>Resepsi</strong></p>
         <p>Sabtu, 09 Januari 2027</p>
         <p>11.00 WIB - Selesai</p>
         <p>Balai Pertemuan Surabaya</p>
       </div>
+
+      <div class="action-section">
+        <a class="action-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20RSVP%20undangan%20Raisa%20%26%20Hamis" target="_blank" rel="noopener noreferrer">RSVP WhatsApp</a>
+        <a class="action-btn" href="https://www.google.com/maps?q=-7.2575,112.7521" target="_blank" rel="noopener noreferrer">Lihat Lokasi</a>
+        <a class="action-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Raisa%20%26%20Hamis&dates=20270109T010000Z/20270109T050000Z&details=Undangan%20pernikahan%20Raisa%20%26%20Hamis&location=Balai%20Pertemuan%20Surabaya" target="_blank" rel="noopener noreferrer">Tambah ke Kalender</a>
+        <a class="action-btn" href="https://wa.me/?text=Saya%20mengundang%20Anda%20ke%20pernikahan%20Raisa%20%26%20Hamis" target="_blank" rel="noopener noreferrer">Share ke WhatsApp</a>
+      </div>
     </section>
 
-    <section class="detail" id="gallery">
+    <section class="gallery" id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="assets/foto1.jpg" alt="Foto 1">
+        <img src="assets/foto2.jpg" alt="Foto 2">
+        <img src="assets/foto3.jpg" alt="Foto 3">
+        <img src="assets/foto4.jpg" alt="Foto 4">
+      </div>
+    </section>
+
+    <section class="wishes" id="wishes">
       <h2>Ucapan</h2>
       <div class="card">
-        <p>
-          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
-        </p>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
       </div>
-      <section class="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
-    <img src="assets/foto1.jpg" alt="Foto 1">
-    <img src="assets/foto2.jpg" alt="Foto 2">
-    <img src="assets/foto3.jpg" alt="Foto 3">
-  </div>
-</section>
+      <textarea placeholder="Tulis ucapan kamu di sini..."></textarea>
     </section>
 
     <nav class="bottom-nav">
       <a href="#home" class="nav-item">⌂</a>
       <a href="#detail" class="nav-item">♥</a>
       <a href="#gallery" class="nav-item">❖</a>
-      <a href="#detail" class="nav-item">☰</a>
-      <a href="https://wa.me/" class="nav-item" target="_blank" rel="noopener noreferrer">✆</a>
+      <a href="#wishes" class="nav-item">☰</a>
+      <a href="https://wa.me/6281234567890" class="nav-item" target="_blank" rel="noopener noreferrer">✆</a>
     </nav>
   </main>
-<a class="action-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20RSVP%20undangan%20pernikahan" target="_blank" rel="noopener noreferrer">
-  RSVP WhatsApp
-</a>
-  <a class="action-btn" href="https://www.google.com/maps?q=-7.2575,112.7521" target="_blank" rel="noopener noreferrer">
-  Lihat Lokasi
-</a>
-  <a class="action-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Raisa%20%26%20Hamis&dates=20270109T010000Z/20270109T050000Z&details=Undangan%20pernikahan&location=Balai%20Pertemuan%20Surabaya" target="_blank" rel="noopener noreferrer">
-  Tambah ke Kalender
-</a>
+
   <script src="script.js"></script>
 </body>
 </html>
