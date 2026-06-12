@@ -128,20 +128,16 @@
     <p>Konfirmasi kehadiran Anda paling lambat <strong>01 Januari 2027</strong>.</p>
   </div>
 
-  <div class="rsvp-form">
-    <input type="text" id="rsvpName" placeholder="Nama lengkap kamu" />
-    <select id="rsvpAttend">
-      <option value="">-- Konfirmasi Kehadiran --</option>
-      <option value="hadir">✅ Hadir</option>
-      <option value="tidak">❌ Tidak Hadir</option>
-      <option value="mungkin">🤔 Mungkin Hadir</option>
-    </select>
-    <input type="number" id="rsvpGuest" placeholder="Jumlah tamu (termasuk kamu)" min="1" max="10" />
-    <textarea id="rsvpMessage" placeholder="Tulis ucapan & doa untuk pengantin..."></textarea>
-    <a id="rsvpSend" class="action-btn rsvp-btn" href="#" onclick="sendRSVP(event)">
-      Kirim via WhatsApp
-    </a>
-  </div>
+ <select id="rsvpCategory" onchange="updateGuestCount()">
+  <option value="">-- Kategori Tamu --</option>
+  <option value="keluarga">👨‍👩‍👧 Keluarga</option>
+  <option value="tamu">🤝 Tamu Mempelai</option>
+  <option value="teman">👫 Teman Mempelai</option>
+</select>
+
+<select id="rsvpGuest">
+  <option value="">-- Pilih kategori dulu --</option>
+</select>
 </section>
 
       <nav class="bottom-nav">
