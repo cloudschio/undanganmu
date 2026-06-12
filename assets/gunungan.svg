@@ -1,0 +1,59 @@
+<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ornamen gunungan Jawa">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7e3b2"/>
+      <stop offset="50%" stop-color="#d9b36a"/>
+      <stop offset="100%" stop-color="#b9852f"/>
+    </linearGradient>
+    <linearGradient id="goldDark" x1="0%" y1="0%" x2="1%" y2="100%">
+      <stop offset="0%" stop-color="#fff0cc"/>
+      <stop offset="100%" stop-color="#c4913f"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 16
+             C132 44, 154 74, 154 110
+             C154 168, 127 214, 100 242
+             C73 214, 46 168, 46 110
+             C46 74, 68 44, 100 16Z" fill="url(#goldDark)"/>
+
+    <path d="M100 34
+             C122 54, 138 79, 138 107
+             C138 154, 118 193, 100 214
+             C82 193, 62 154, 62 107
+             C62 79, 78 54, 100 34Z" fill="none"/>
+
+    <path d="M100 52
+             C114 64, 124 80, 124 99
+             C124 135, 111 163, 100 179
+             C89 163, 76 135, 76 99
+             C76 80, 86 64, 100 52Z" fill="none"/>
+
+    <path d="M78 98 C86 92, 94 90, 100 90 C106 90, 114 92, 122 98"/>
+    <path d="M73 118 C84 110, 92 108, 100 108 C108 108, 116 110, 127 118"/>
+    <path d="M76 138 C86 132, 93 130, 100 130 C107 130, 114 132, 124 138"/>
+
+    <path d="M100 72 C95 82, 92 92, 92 103 C92 125, 96 146, 100 160 C104 146, 108 125, 108 103 C108 92, 105 82, 100 72Z" fill="none"/>
+
+    <path d="M100 16 L100 242" opacity="0.35"/>
+    <path d="M61 88 C53 86, 48 80, 45 72"/>
+    <path d="M139 88 C147 86, 152 80, 155 72"/>
+    <path d="M58 126 C48 128, 42 135, 38 144"/>
+    <path d="M142 126 C152 128, 158 135, 162 144"/>
+
+    <path d="M82 188 C89 182, 95 179, 100 179 C105 179, 111 182, 118 188"/>
+    <path d="M73 202 C84 195, 92 192, 100 192 C108 192, 116 195, 127 202"/>
+  </g>
+
+  <g fill="#f7e3b2" opacity="0.95">
+    <circle cx="100" cy="56" r="4"/>
+    <circle cx="100" cy="78" r="3.5"/>
+    <circle cx="100" cy="100" r="3"/>
+    <circle cx="100" cy="122" r="2.8"/>
+    <circle cx="100" cy="144" r="2.6"/>
+    <circle cx="100" cy="166" r="2.4"/>
+  </g>
+
+  <path d="M88 212 C94 220, 106 220, 112 212" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+</svg>
