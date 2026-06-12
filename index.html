@@ -3,159 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan Adat Jawa</title>
-  <meta name="description" content="Undangan digital online bertema adat Jawa dengan animasi, galeri, RSVP, share WhatsApp, dan musik latar." />
+  <title>Undangan Digital | Raisa & Hamis</title>
+  <meta name="description" content="Undangan digital pernikahan elegan nuansa emas." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="opening" id="opening">
-  <div class="opening-card-simple">
-    <p class="opening-label">Undangan Pernikahan</p>
-    <h1>Nama Mempelai<br><span>&</span><br>Nama Pasangan</h1>
-    <p class="opening-text">Dengan penuh hormat, kami mengundang Anda untuk hadir pada hari bahagia kami.</p>
-    <button class="btn primary open-invite-btn" id="openInviteBtn">Buka Undangan</button>
-  </div>
-</div>
-  <button class="floating-btn music-btn" id="musicBtn" aria-label="Toggle music">
-    <i class="fa-solid fa-music"></i>
-  </button>
-  <button class="floating-btn top-btn" id="topBtn" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
+  <div class="overlay"></div>
 
-  <audio id="bgMusic" loop>
-    <source src="assets/music/gamelan.mp3" type="audio/mpeg" />
-  </audio>
+  <main class="invitation">
+    <div class="corner corner-top-left"></div>
+    <div class="corner corner-top-right"></div>
+    <div class="corner corner-bottom-left"></div>
+    <div class="corner corner-bottom-right"></div>
 
-  <main>
     <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-      <div class="javanese-frame"></div>
+      <div class="ornament top-ornament">❁ ❀ ❁</div>
 
-      <div class="hero-content">
-        <p class="invite-label">Undangan Pernikahan</p>
-        <h1>Nama Mempelai<br><span>&</span><br>Nama Pasangan</h1>
-        <p class="hero-subtitle">
-          Dengan penuh hormat, kami mengundang Anda hadir di hari bahagia kami
-        </p>
+      <div class="emblem-wrap">
+        <div class="emblem">✦</div>
+        <p class="label">THE WEDDING OF</p>
+      </div>
 
-        <div class="hero-meta">
-          <div>
-            <i class="fa-regular fa-calendar"></i>
-            <span>Sabtu, 25 Desember 2026</span>
-          </div>
-          <div>
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Alamat Acara</span>
-          </div>
+      <h1 class="couple">Raisa &amp; Hamis</h1>
+
+      <p class="subtitle">
+        Kami akan menikah,<br />
+        dan kami ingin Anda menjadi bagian dari hari istimewa kami.
+      </p>
+
+      <section class="countdown-section">
+        <div class="countdown-box">
+          <span id="days">00</span>
+          <small>Hari</small>
         </div>
-
-        <div class="hero-actions">
-          <a href="#content" class="btn primary" id="openInvite">Buka Undangan</a>
-          <button class="btn secondary" id="shareBtn">
-            <i class="fa-solid fa-share-nodes"></i> Share
-          </button>
+        <div class="countdown-box">
+          <span id="hours">00</span>
+          <small>Jam</small>
         </div>
+        <div class="countdown-box">
+          <span id="minutes">00</span>
+          <small>Menit</small>
+        </div>
+        <div class="countdown-box">
+          <span id="seconds">00</span>
+          <small>Detik</small>
+        </div>
+      </section>
+
+      <p class="event-date">Sabtu, 09 Januari 2027</p>
+
+      <a class="open-btn" href="#detail">Lihat Undangan</a>
+    </section>
+
+    <section class="detail" id="detail">
+      <h2>Detail Acara</h2>
+      <div class="card">
+        <p><strong>Akad Nikah</strong></p>
+        <p>Sabtu, 09 Januari 2027</p>
+        <p>08.00 WIB</p>
+        <p>Balai Pertemuan Surabaya</p>
+      </div>
+
+      <div class="card">
+        <p><strong>Resepsi</strong></p>
+        <p>Sabtu, 09 Januari 2027</p>
+        <p>11.00 WIB - Selesai</p>
+        <p>Balai Pertemuan Surabaya</p>
       </div>
     </section>
 
-    <section class="content" id="content">
-      <div class="ornament-section">
-        <div class="ornament-line"></div>
-        <p class="javanese-text">꧋ꦱꦭꦩꦠ꧀ ꦠꦺꦴꦧꦺꦁ ꦠꦼꦩ꧀ꦧꦏ꧀ ꦥꦸꦩ꦳ꦴꦁꦏꦸꦁ</p>
-        <p class="section-desc">
-          Kehadiran Anda merupakan kebahagiaan dan kehormatan bagi kami dan keluarga.
+    <section class="detail" id="gallery">
+      <h2>Ucapan</h2>
+      <div class="card">
+        <p>
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
         </p>
       </div>
-
-      <section class="card grid-2 reveal">
-        <div>
-          <h2>Save the Date</h2>
-          <div class="countdown" id="countdown">
-            <div><span id="days">00</span><small>Hari</small></div>
-            <div><span id="hours">00</span><small>Jam</small></div>
-            <div><span id="minutes">00</span><small>Menit</small></div>
-            <div><span id="seconds">00</span><small>Detik</small></div>
-          </div>
-        </div>
-
-        <div>
-          <h2>Lokasi Acara</h2>
-          <p>Alamat Acara</p>
-          <p>Akad: 08.00 WIB • Resepsi: 11.00 WIB</p>
-          <a class="btn primary block" target="_blank" rel="noopener" href="https://www.google.com/maps">
-            Buka Google Maps
-          </a>
-        </div>
-      </section>
-
-      <section class="card reveal">
-        <h2>Pasangan Pengantin</h2>
-        <div class="bride-groom">
-          <div class="profile-card">
-            <div class="avatar"><i class="fa-solid fa-user"></i></div>
-            <h3>Nama Mempelai</h3>
-            <p>Putra dari keluarga yang penuh kasih</p>
-          </div>
-          <div class="profile-card">
-            <div class="avatar"><i class="fa-solid fa-user"></i></div>
-            <h3>Nama Pasangan</h3>
-            <p>Putri dari keluarga yang penuh cinta</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="card reveal">
-        <h2>Galeri</h2>
-        <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Galeri 1">
-          <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59da8?auto=format&fit=crop&w=900&q=80" alt="Galeri 2">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Galeri 3">
-        </div>
-      </section>
-
-      <section class="card reveal">
-        <h2>RSVP & Ucapan</h2>
-        <form id="rsvpForm" class="rsvp-form">
-          <input type="text" id="name" placeholder="Nama Anda" required>
-          <select id="attendance" required>
-            <option value="">Konfirmasi Kehadiran</option>
-            <option value="Hadir">Hadir</option>
-            <option value="Tidak Hadir">Tidak Hadir</option>
-          </select>
-          <textarea id="message" rows="4" placeholder="Ucapan untuk mempelai" required></textarea>
-          <button class="btn primary" type="submit">Kirim RSVP</button>
-        </form>
-        <div id="rsvpList" class="rsvp-list"></div>
-      </section>
-
-      <section class="card reveal">
-        <h2>Wedding Gift</h2>
-        <div class="gift-box">
-          <div>
-            <strong>BCA</strong>
-            <p>1234567890</p>
-            <button class="btn secondary copyBtn" data-copy="1234567890">Copy</button>
-          </div>
-          <div>
-            <strong>Mandiri</strong>
-            <p>9876543210</p>
-            <button class="btn secondary copyBtn" data-copy="9876543210">Copy</button>
-          </div>
-        </div>
-      </section>
-
-      <footer class="footer reveal">
-        <p>Terima kasih atas doa dan kehadiran Anda</p>
-        <small>© 2026 Undangan Digital Adat Jawa</small>
-      </footer>
     </section>
+
+    <nav class="bottom-nav">
+      <a href="#home" class="nav-item">⌂</a>
+      <a href="#detail" class="nav-item">♥</a>
+      <a href="#gallery" class="nav-item">❖</a>
+      <a href="#detail" class="nav-item">☰</a>
+      <a href="https://wa.me/" class="nav-item" target="_blank" rel="noopener noreferrer">✆</a>
+    </nav>
   </main>
 
-  <script src="assets/js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
