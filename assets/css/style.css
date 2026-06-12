@@ -11,3 +11,22 @@ body::before {
     radial-gradient(circle at 75px 75px, rgba(107, 31, 31, 0.28) 0 10px, transparent 11px);
   background-size: 100px 100px;
 }
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+  background:
+    linear-gradient(45deg, transparent 48%, rgba(202,162,75,0.25) 49%, rgba(202,162,75,0.25) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(107,31,31,0.18) 49%, rgba(107,31,31,0.18) 51%, transparent 52%);
+  background-size: 120px 120px;
+}
+body {
+  background:
+    linear-gradient(rgba(247, 239, 226, 0.96), rgba(241, 224, 198, 0.96)),
+    url("assets/images/kawung-pattern.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
