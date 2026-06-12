@@ -15,13 +15,13 @@ const seconds = document.getElementById('seconds');
 
 setTimeout(() => loader.style.display = 'none', 1200);
 
-function countdown(){
+function countdown() {
   const now = Date.now();
   const dist = targetDate - now;
-  days.textContent = String(Math.floor(dist / 86400000)).padStart(2,'0');
-  hours.textContent = String(Math.floor((dist % 86400000) / 3600000)).padStart(2,'0');
-  minutes.textContent = String(Math.floor((dist % 3600000) / 60000)).padStart(2,'0');
-  seconds.textContent = String(Math.floor((dist % 60000) / 1000)).padStart(2,'0');
+  days.textContent = String(Math.floor(dist / 86400000)).padStart(2, '0');
+  hours.textContent = String(Math.floor((dist % 86400000) / 3600000)).padStart(2, '0');
+  minutes.textContent = String(Math.floor((dist % 3600000) / 60000)).padStart(2, '0');
+  seconds.textContent = String(Math.floor((dist % 60000) / 1000)).padStart(2, '0');
 }
 setInterval(countdown, 1000);
 countdown();
