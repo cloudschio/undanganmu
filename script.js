@@ -1,3 +1,31 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const categorySelect = document.getElementById("rsvpCategory");
+  const guestSelect = document.getElementById("rsvpGuest");
+
+  if (categorySelect && guestSelect) {
+    categorySelect.addEventListener("change", function () {
+      const category = this.value;
+
+      guestSelect.innerHTML = "";
+      guestSelect.disabled = true;
+
+      if (!category) {
+        guestSelect.innerHTML = `<option value="">-- Pilih kategori dulu --</option>`;
+        return;
+      }
+
+      const maxGuest = category === "teman" ? 2 : 4;
+
+      let options = `<option value="">-- Jumlah Tamu --</option>`;
+      for (let i = 1; i <= maxGuest; i++) {
+        options += `<option value="${i}">${i} Orang</option>`;
+      }
+
+      guestSelect.innerHTML = options;
+      guestSelect.disabled = false;
+    });
+  }
+});
 const targetDate = new Date("2027-01-09T08:00:00+07:00").getTime();
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
