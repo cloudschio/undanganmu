@@ -58,12 +58,13 @@ function sendRSVP(e) {
   e.preventDefault();
 
   const name = document.getElementById("rsvpName").value.trim();
+  const category = document.getElementById("rsvpCategory").value;
   const attend = document.getElementById("rsvpAttend").value;
   const guest = document.getElementById("rsvpGuest").value;
   const message = document.getElementById("rsvpMessage").value.trim();
 
-  if (!name || !attend) {
-    alert("Harap isi nama dan konfirmasi kehadiran terlebih dahulu.");
+  if (!name || !category || !attend || !guest) {
+    alert("Harap lengkapi semua kolom terlebih dahulu.");
     return;
   }
 
@@ -73,11 +74,18 @@ function sendRSVP(e) {
     mungkin: "🤔 Mungkin Hadir"
   }[attend];
 
+  const categoryText = {
+    ortu: "👨‍👩‍👧 Orang Tua Mempelai",
+    tamu: "🤝 Tamu Mempelai",
+    teman: "👫 Teman Mempelai"
+  }[category];
+
   const waMessage =
     `Halo, saya ingin konfirmasi kehadiran:%0A%0A` +
     `👤 Nama: ${encodeURIComponent(name)}%0A` +
+    `🏷️ Kategori: ${encodeURIComponent(categoryText)}%0A` +
     `📋 Status: ${encodeURIComponent(attendText)}%0A` +
-    `👥 Jumlah tamu: ${guest || 1}%0A` +
+    `👥 Jumlah tamu: ${guest} Orang%0A` +
     (message ? `💬 Ucapan: ${encodeURIComponent(message)}%0A` : "") +
     `%0ATerima kasih 🙏`;
 
