@@ -277,3 +277,22 @@ body {
   right: -10px;
   transform: scaleX(-1) rotate(-8deg);
 }
+.corner-gunungan {
+  position: fixed;
+  top: 0;
+  width: 120px;
+  height: 140px;
+  z-index: 2;
+  pointer-events: none;
+  background: url('assets/gunungan.png') center/contain no-repeat;
+  opacity: 0.95;
+}
+
+.corner-gunungan-left {
+  left: 0;
+}
+
+.corner-gunungan-right {
+  right: 0;
+  transform: scaleX(-1);
+}
