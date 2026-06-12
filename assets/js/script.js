@@ -80,3 +80,14 @@ rsvpForm.addEventListener('submit', (e) => {
   }).catch(() => {});
   rsvpForm.reset();
 });
+const opening = document.getElementById('opening');
+const openInviteBtn = document.getElementById('openInviteBtn');
+
+openInviteBtn.addEventListener('click', async () => {
+  opening.classList.add('hide');
+
+  try {
+    await bgMusic.play();
+    musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+  } catch (e) {}
+});
