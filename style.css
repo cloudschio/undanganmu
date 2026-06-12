@@ -136,32 +136,6 @@ body {
   gap: 18px;
 }
 
-/* ===== GUNUNGAN CORNER ===== */
-.corner-gunungan {
-  position: fixed;
-  top: -10px;
-  width: 118px;
-  height: 150px;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.96;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
-}
-
-.corner-gunungan svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.corner-gunungan-left {
-  left: -8px;
-}
-
-.corner-gunungan-right {
-  right: -8px;
-  transform: scaleX(-1);
-}
 
 /* ===== ORNAMENT ===== */
 .ornament {
