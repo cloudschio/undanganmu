@@ -1,5 +1,4 @@
 const targetDate = new Date("2027-01-09T08:00:00+07:00").getTime();
-
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
@@ -27,8 +26,22 @@ function updateCountdown() {
   minutesEl.textContent = String(minutes).padStart(2, "0");
   secondsEl.textContent = String(seconds).padStart(2, "0");
 }
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+const cover = document.getElementById("cover");
+const openInvite = document.getElementById("openInvite");
 const musicToggle = document.getElementById("musicToggle");
 const bgMusic = document.getElementById("bgMusic");
+
+openInvite.addEventListener("click", async () => {
+  cover.classList.add("hidden");
+  try {
+    await bgMusic.play();
+    musicToggle.textContent = "❚❚ Musik";
+  } catch (e) {}
+});
 
 musicToggle.addEventListener("click", async () => {
   if (bgMusic.paused) {
@@ -41,5 +54,3 @@ musicToggle.addEventListener("click", async () => {
     musicToggle.textContent = "♫ Musik";
   }
 });
-updateCountdown();
-setInterval(updateCountdown, 1000);
