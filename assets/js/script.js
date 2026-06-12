@@ -13,7 +13,6 @@ const hours = document.getElementById('hours');
 const minutes = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
 
-setTimeout(() => loader.style.display = 'none', 1200);
 
 function countdown() {
   const now = Date.now();
