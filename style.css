@@ -1,6 +1,6 @@
 :root {
   --gold: #d9b36a;
-  --gold-soft: #f0dfb3;
+  --gold-soft: #f4e1b6;
   --dark: #050505;
   --dark-soft: rgba(0, 0, 0, 0.55);
   --white: #fff8eb;
@@ -37,6 +37,85 @@ body {
   pointer-events: none;
 }
 
+/* ===== COVER ===== */
+.cover {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.cover.hidden {
+  display: none;
+}
+
+.cover-card {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  padding: 28px 20px;
+  border: 1px solid rgba(217, 179, 106, 0.7);
+  border-radius: 22px;
+  background: rgba(20, 15, 8, 0.92);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.cover-card p {
+  color: #f3deb0;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.cover-card h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.6rem;
+  color: #f6ebd1;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* ===== BUTTONS ===== */
+.open-invite-btn,
+.action-btn,
+.music-btn,
+.open-btn {
+  border: 1px solid rgba(217, 179, 106, 0.7);
+  background: linear-gradient(135deg, #f3deb0, #c89a47);
+  color: #111;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.open-invite-btn:hover,
+.action-btn:hover,
+.music-btn:hover,
+.open-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* ===== MUSIK BUTTON ===== */
+.music-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 30;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+}
+
+/* ===== LAYOUT ===== */
 .invitation {
   width: 100%;
   max-width: 430px;
@@ -46,6 +125,7 @@ body {
   padding: 24px 18px 110px;
 }
 
+/* ===== HERO ===== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -56,6 +136,34 @@ body {
   gap: 18px;
 }
 
+/* ===== GUNUNGAN CORNER ===== */
+.corner-gunungan {
+  position: fixed;
+  top: -10px;
+  width: 118px;
+  height: 150px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.96;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+
+.corner-gunungan svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.corner-gunungan-left {
+  left: -8px;
+}
+
+.corner-gunungan-right {
+  right: -8px;
+  transform: scaleX(-1);
+}
+
+/* ===== ORNAMENT ===== */
 .ornament {
   color: var(--gold-soft);
   letter-spacing: 4px;
@@ -63,6 +171,7 @@ body {
   opacity: 0.9;
 }
 
+/* ===== EMBLEM ===== */
 .emblem-wrap {
   display: flex;
   flex-direction: column;
@@ -94,6 +203,7 @@ body {
   letter-spacing: 1px;
 }
 
+/* ===== TYPOGRAPHY ===== */
 .couple {
   font-family: 'Great Vibes', cursive;
   font-size: clamp(2.5rem, 7vw, 4rem);
@@ -109,6 +219,14 @@ body {
   color: #f4e7cb;
 }
 
+.event-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  color: var(--gold-soft);
+  margin-top: 6px;
+}
+
+/* ===== COUNTDOWN ===== */
 .countdown-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -123,6 +241,7 @@ body {
   padding: 12px 6px;
   background: rgba(0, 0, 0, 0.38);
   box-shadow: var(--shadow);
+  text-align: center;
 }
 
 .countdown-box span {
@@ -139,42 +258,24 @@ body {
   color: #f6ebd1;
 }
 
-.event-date {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.7rem;
-  color: var(--gold-soft);
-  margin-top: 6px;
-}
-
-.open-btn {
-  text-decoration: none;
-  color: #111;
-  background: linear-gradient(135deg, #f3deb0, #c89a47);
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-weight: 700;
-  margin-top: 6px;
-  box-shadow: var(--shadow);
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.open-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.95;
-}
-
-.detail {
+/* ===== DETAIL, GALLERY, WISHES ===== */
+.detail,
+.gallery,
+.wishes {
   padding: 30px 0 10px;
   text-align: center;
 }
 
-.detail h2 {
+.detail h2,
+.gallery h2,
+.wishes h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   color: var(--gold-soft);
   margin-bottom: 18px;
 }
 
+/* ===== CARD ===== */
 .card {
   background: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(217, 179, 106, 0.7);
@@ -185,6 +286,62 @@ body {
   line-height: 1.8;
 }
 
+/* ===== ACTION SECTION ===== */
+.action-section {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-btn {
+  text-align: center;
+  width: 100%;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(217, 179, 106, 0.5);
+  transition: transform 0.25s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== TEXTAREA ===== */
+.wishes textarea {
+  width: 100%;
+  min-height: 110px;
+  border-radius: 14px;
+  border: 1px solid rgba(217, 179, 106, 0.6);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--white);
+  padding: 14px;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.wishes textarea::placeholder {
+  color: rgba(255, 248, 235, 0.45);
+}
+
+.wishes textarea:focus {
+  border-color: var(--gold);
+}
+
+/* ===== BOTTOM NAV ===== */
 .bottom-nav {
   position: fixed;
   left: 50%;
@@ -219,108 +376,12 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 380px) {
-  .couple {
-    font-size: 2.2rem;
-  }
-
-  .countdown-box span {
-    font-size: 1.7rem;
-  }
-
-  .event-date {
-    font-size: 1.4rem;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
-  }
-}
-.corner-gunungan {
-  position: fixed;
-  top: -8px;
-  width: 110px;
-  height: 140px;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.95;
-}
-
-.corner-gunungan svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.corner-gunungan-left {
-  left: -10px;
-}
-
-.corner-gunungan-right {
-  right: -10px;
-  transform: scaleX(-1);
-}
-.corner-gunungan {
-  position: fixed;
-  top: -10px;
-  width: 118px;
-  height: 150px;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.96;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
-}
-
-.corner-gunungan svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.corner-gunungan-left {
-  left: -8px;
-}
-
-.corner-gunungan-right {
-  right: -8px;
-  transform: scaleX(-1);
-}
-
-@media (max-width: 380px) {
-  .corner-gunungan {
-    width: 96px;
-    height: 124px;
-  }
-}
-.music-btn {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 30;
-  border: none;
-  background: rgba(0, 0, 0, 0.55);
-  color: #f6ebd1;
-  border: 1px solid rgba(217, 179, 106, 0.7);
-  padding: 10px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.gallery {
-  padding: 30px 0;
-  text-align: center;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(217, 179, 106, 0.5);
+  .couple { font-size: 2.2rem; }
+  .countdown-box span { font-size: 1.7rem; }
+  .event-date { font-size: 1.4rem; }
+  .subtitle { font-size: 0.9rem; }
+  .corner-gunungan { width: 96px; height: 124px; }
+  .emblem { width: 90px; height: 90px; font-size: 1.6rem; }
 }
