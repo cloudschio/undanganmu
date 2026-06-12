@@ -101,4 +101,13 @@ openInviteBtn.addEventListener('click',async()=>{
     musicBtn.innerHTML='<i class="fa-solid fa-volume-high"></i>'
   }catch(e){}
   setTimeout(()=>{opening.classList.add('hide')},1400)
+});const opening=document.getElementById('opening');
+const openInviteBtn=document.getElementById('openInviteBtn');
+
+openInviteBtn.addEventListener('click',async()=>{
+  try{
+    await bgMusic.play();
+    musicBtn.innerHTML='<i class="fa-solid fa-volume-high"></i>'
+  }catch(e){}
+  opening.classList.add('hide')
 });
