@@ -359,3 +359,106 @@ body {
   .corner-gunungan { width: 96px; height: 124px; }
   .emblem { width: 90px; height: 90px; font-size: 1.6rem; }
 }
+/* ===== QRIS ===== */
+.qris {
+  padding: 30px 0 10px;
+  text-align: center;
+}
+
+.qris h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--gold-soft);
+  margin-bottom: 18px;
+}
+
+.qris-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qris-label {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.qris-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(217, 179, 106, 0.6);
+  margin: 10px auto;
+}
+
+.qris-note {
+  font-size: 0.85rem;
+  color: #f4e7cb;
+  opacity: 0.8;
+}
+
+/* ===== RSVP ===== */
+.rsvp {
+  padding: 30px 0 10px;
+  text-align: center;
+}
+
+.rsvp h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--gold-soft);
+  margin-bottom: 18px;
+}
+
+.rsvp-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(217, 179, 106, 0.6);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.rsvp-form input::placeholder {
+  color: rgba(255, 248, 235, 0.45);
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus {
+  border-color: var(--gold);
+}
+
+.rsvp-form select option {
+  background: #1a1208;
+  color: var(--white);
+}
+
+.rsvp-btn {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 14px;
+}
+
+.rsvp-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
