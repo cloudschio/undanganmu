@@ -239,60 +239,25 @@ body {
 }
 .corner-gunungan {
   position: fixed;
-  top: 0;
+  top: -8px;
   width: 110px;
-  height: 130px;
+  height: 140px;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.85;
-  background: linear-gradient(180deg, #f3deb0 0%, #c6923f 100%);
-  clip-path: polygon(
-    50% 0%,
-    62% 6%,
-    70% 16%,
-    78% 28%,
-    86% 42%,
-    91% 58%,
-    84% 72%,
-    88% 88%,
-    72% 100%,
-    28% 100%,
-    12% 88%,
-    16% 72%,
-    9% 58%,
-    14% 42%,
-    22% 28%,
-    30% 16%,
-    38% 6%
-  );
-  filter: drop-shadow(0 0 10px rgba(217, 179, 106, 0.35));
+  opacity: 0.95;
+}
+
+.corner-gunungan svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .corner-gunungan-left {
   left: -10px;
-  transform: rotate(-8deg);
 }
 
 .corner-gunungan-right {
   right: -10px;
-  transform: scaleX(-1) rotate(-8deg);
-}
-.corner-gunungan {
-  position: fixed;
-  top: 0;
-  width: 120px;
-  height: 140px;
-  z-index: 2;
-  pointer-events: none;
-  background: url('assets/gunungan.png') center/contain no-repeat;
-  opacity: 0.95;
-}
-
-.corner-gunungan-left {
-  left: 0;
-}
-
-.corner-gunungan-right {
-  right: 0;
   transform: scaleX(-1);
 }
