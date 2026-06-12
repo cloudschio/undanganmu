@@ -293,3 +293,16 @@ body {
     height: 124px;
   }
 }
+.music-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 30;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #f6ebd1;
+  border: 1px solid rgba(217, 179, 106, 0.7);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
