@@ -18,23 +18,39 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.92)),
     url('assets/bg.jpg') center center / cover no-repeat fixed;
   color: var(--white);
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
 }
-
 .overlay {
   position: fixed;
   inset: 0;
-  background:
-    radial-gradient(circle at top left, rgba(217,179,106,0.22), transparent 25%),
-    radial-gradient(circle at top right, rgba(217,179,106,0.18), transparent 20%),
-    radial-gradient(circle at bottom left, rgba(217,179,106,0.14), transparent 20%),
-    radial-gradient(circle at bottom right, rgba(217,179,106,0.14), transparent 20%);
+  background: rgba(0, 0, 0, 0.45);
   pointer-events: none;
+  z-index: 0;
+  animation: overlayShimmer 8s ease-in-out infinite;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(217,179,106,0.28), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(217,179,106,0.22), transparent 35%);
+  animation: overlayPulse 6s ease-in-out infinite alternate;
+}
+
+.overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(217,179,106,0.18), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(217,179,106,0.14), transparent 30%);
+  animation: overlayPulse 6s ease-in-out infinite alternate-reverse;
 }
 
 /* ===== COVER ===== */
@@ -126,8 +142,8 @@ body {
   min-height: 100vh;
   position: relative;
   padding: 24px 18px 110px;
+  z-index: 1;
 }
-
 /* ===== HERO ===== */
 .hero {
   min-height: 100vh;
@@ -488,3 +504,23 @@ body {
 @keyframes bounceIn {
   0%   { opacity: 0; transform: scale(0.85) translateY(30px); }
   60%  { opacity: 1; transform: 
+@keyframes overlayShimmer {
+  0%   { background: rgba(0, 0, 0, 0.45); }
+  50%  { background: rgba(0, 0, 0, 0.30); }
+  100% { background: rgba(0, 0, 0, 0.45); }
+}
+
+@keyframes overlayPulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
