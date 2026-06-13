@@ -61,6 +61,7 @@ body {
   border-radius: 22px;
   background: rgba(20, 15, 8, 0.92);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  animation: bounceIn 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 .cover-card p {
@@ -113,6 +114,8 @@ body {
   z-index: 30;
   padding: 10px 14px;
   font-size: 0.82rem;
+  animation: fadeBounce 0.8s ease both;
+  animation-delay: 1.2s;
 }
 
 /* ===== LAYOUT ===== */
@@ -136,7 +139,6 @@ body {
   gap: 18px;
 }
 
-
 /* ===== ORNAMENT ===== */
 .ornament {
   color: var(--gold-soft);
@@ -152,6 +154,8 @@ body {
   align-items: center;
   gap: 10px;
   margin-top: 10px;
+  animation: bounceIn 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation-delay: 0.2s;
 }
 
 .emblem {
@@ -184,6 +188,8 @@ body {
   color: var(--gold-soft);
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
   font-weight: 400;
+  animation: bounceIn 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation-delay: 0.4s;
 }
 
 .subtitle {
@@ -191,6 +197,8 @@ body {
   line-height: 1.65;
   font-size: 0.98rem;
   color: #f4e7cb;
+  animation: fadeBounce 0.8s ease both;
+  animation-delay: 0.6s;
 }
 
 .event-date {
@@ -198,6 +206,8 @@ body {
   font-size: 1.7rem;
   color: var(--gold-soft);
   margin-top: 6px;
+  animation: fadeBounce 0.8s ease both;
+  animation-delay: 0.85s;
 }
 
 /* ===== COUNTDOWN ===== */
@@ -207,6 +217,8 @@ body {
   gap: 10px;
   width: 100%;
   margin-top: 12px;
+  animation: fadeBounce 0.8s ease both;
+  animation-delay: 0.7s;
 }
 
 .countdown-box {
@@ -225,24 +237,42 @@ body {
   line-height: 1;
   color: var(--gold-soft);
   margin-bottom: 4px;
+  animation: bouncePulse 2.4s ease-in-out infinite;
 }
+
+.countdown-box:nth-child(1) span { animation-delay: 0s; }
+.countdown-box:nth-child(2) span { animation-delay: 0.2s; }
+.countdown-box:nth-child(3) span { animation-delay: 0.4s; }
+.countdown-box:nth-child(4) span { animation-delay: 0.6s; }
 
 .countdown-box small {
   font-size: 0.78rem;
   color: #f6ebd1;
 }
 
+/* ===== OPEN BTN ===== */
+.open-btn {
+  animation: bounceIn 0.8s ease both;
+  animation-delay: 1s;
+}
+
 /* ===== DETAIL, GALLERY, WISHES ===== */
 .detail,
 .gallery,
-.wishes {
+.wishes,
+.lokasi,
+.qris,
+.rsvp {
   padding: 30px 0 10px;
   text-align: center;
 }
 
 .detail h2,
 .gallery h2,
-.wishes h2 {
+.wishes h2,
+.lokasi h2,
+.qris h2,
+.rsvp h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   color: var(--gold-soft);
@@ -292,204 +322,12 @@ body {
   transform: scale(1.03);
 }
 
-/* ===== TEXTAREA ===== */
-.wishes textarea {
-  width: 100%;
-  min-height: 110px;
-  border-radius: 14px;
-  border: 1px solid rgba(217, 179, 106, 0.6);
-  background: rgba(0, 0, 0, 0.45);
-  color: var(--white);
-  padding: 14px;
-  outline: none;
-  resize: vertical;
-  font-family: inherit;
-  font-size: 0.95rem;
-}
+.gallery-grid img:nth-child(1) { animation-delay: 0.1s; }
+.gallery-grid img:nth-child(2) { animation-delay: 0.2s; }
+.gallery-grid img:nth-child(3) { animation-delay: 0.3s; }
+.gallery-grid img:nth-child(4) { animation-delay: 0.4s; }
 
-.wishes textarea::placeholder {
-  color: rgba(255, 248, 235, 0.45);
-}
-
-.wishes textarea:focus {
-  border-color: var(--gold);
-}
-
-/* ===== BOTTOM NAV ===== */
-.bottom-nav {
-.bottom-nav {
-  position: fixed;
-  bottom: 18px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: min(92%, 360px);
-  background: linear-gradient(135deg, #c99a4a, #f2ddb0);
-  border-radius: 999px;
-  padding: 10px 14px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  z-index: 20;
-  animation: fadeNavIn 0.8s ease both;
-  animation-delay: 0.3s;
-  /* Hapus transform agar tidak konflik */
-  transform: none;
-}
-
-@keyframes fadeNavIn {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.nav-item {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-  color: #111;
-  background: rgba(0, 0, 0, 0.12);
-  border-radius: 50%;
-  font-size: 1.1rem;
-  transition: transform 0.2s ease, background 0.2s ease;
-  /* Reset animasi supaya tidak kena global */
-  animation: none !important;
-  opacity: 1 !important;
-}
-
-.nav-item:hover {
-  transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.3);
-}
-
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 380px) {
-  .couple { font-size: 2.2rem; }
-  .countdown-box span { font-size: 1.7rem; }
-  .event-date { font-size: 1.4rem; }
-  .subtitle { font-size: 0.9rem; }
-  .corner-gunungan { width: 96px; height: 124px; }
-  .emblem { width: 90px; height: 90px; font-size: 1.6rem; }
-}
-/* ===== QRIS ===== */
-.qris {
-  padding: 30px 0 10px;
-  text-align: center;
-}
-
-.qris h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: var(--gold-soft);
-  margin-bottom: 18px;
-}
-
-.qris-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.qris-label {
-  font-weight: 700;
-  color: var(--gold);
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-
-.qris-img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 12px;
-  border: 2px solid rgba(217, 179, 106, 0.6);
-  margin: 10px auto;
-}
-
-.qris-note {
-  font-size: 0.85rem;
-  color: #f4e7cb;
-  opacity: 0.8;
-}
-
-/* ===== RSVP ===== */
-.rsvp {
-  padding: 30px 0 10px;
-  text-align: center;
-}
-
-.rsvp h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: var(--gold-soft);
-  margin-bottom: 18px;
-}
-
-.rsvp-form {
-  display: grid;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.rsvp-form input,
-.rsvp-form select {
-  width: 100%;
-  padding: 13px 16px;
-  border-radius: 12px;
-  border: 1px solid rgba(217, 179, 106, 0.6);
-  background: rgba(0, 0, 0, 0.45);
-  color: var(--white);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-.rsvp-form input::placeholder {
-  color: rgba(255, 248, 235, 0.45);
-}
-
-.rsvp-form input:focus,
-.rsvp-form select:focus {
-  border-color: var(--gold);
-}
-
-.rsvp-form select option {
-  background: #1a1208;
-  color: var(--white);
-}
-
-.rsvp-btn {
-  width: 100%;
-  text-align: center;
-  background: linear-gradient(135deg, #25d366, #128c7e);
-  color: #fff;
-  border: none;
-  font-size: 1rem;
-  padding: 14px;
-}
-
-.rsvp-btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
 /* ===== LOKASI ===== */
-.lokasi {
-  padding: 30px 0 10px;
-  text-align: center;
-}
-
-.lokasi h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: var(--gold-soft);
-  margin-bottom: 18px;
-}
-
 .lokasi-info {
   text-align: left;
   line-height: 2;
@@ -517,10 +355,48 @@ body {
   margin-top: 4px;
 }
 
-/* ===== RSVP TEXTAREA ===== */
+/* ===== QRIS ===== */
+.qris-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qris-label {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.qris-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(217, 179, 106, 0.6);
+  margin: 10px auto;
+  animation: bouncePulse 3s ease-in-out infinite;
+}
+
+.qris-note {
+  font-size: 0.85rem;
+  color: #f4e7cb;
+  opacity: 0.8;
+}
+
+/* ===== RSVP ===== */
+.rsvp-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
 .rsvp-form textarea {
   width: 100%;
-  min-height: 100px;
   padding: 13px 16px;
   border-radius: 12px;
   border: 1px solid rgba(217, 179, 106, 0.6);
@@ -529,114 +405,86 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
   outline: none;
-  resize: vertical;
   transition: border-color 0.2s ease;
 }
 
+.rsvp-form input::placeholder,
 .rsvp-form textarea::placeholder {
   color: rgba(255, 248, 235, 0.45);
 }
 
+.rsvp-form input:focus,
+.rsvp-form select:focus,
 .rsvp-form textarea:focus {
   border-color: var(--gold);
 }
-/* ===== ANIMASI KEYFRAMES ===== */
-@keyframes bounceIn {
-  0%   { opacity: 0; transform: scale(0.85) translateY(30px); }
-  60%  { opacity: 1; transform: scale(1.04) translateY(-8px); }
-  80%  { transform: scale(0.97) translateY(4px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+
+.rsvp-form select option {
+  background: #1a1208;
+  color: var(--white);
 }
 
-@keyframes bounceUp {
-  0%   { opacity: 0; transform: translateY(40px); }
-  60%  { opacity: 1; transform: translateY(-8px); }
-  80%  { transform: translateY(4px); }
-  100% { opacity: 1; transform: translateY(0); }
+.rsvp-form textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
-@keyframes bouncePulse {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-6px); }
+.rsvp-btn {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 14px;
 }
 
-@keyframes fadeBounce {
-  0%   { opacity: 0; transform: translateY(24px); }
-  60%  { opacity: 1; transform: translateY(-5px); }
-  100% { opacity: 1; transform: translateY(0); }
+.rsvp-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
-/* ===== APPLY ANIMASI ===== */
-.emblem-wrap {
-  animation: bounceIn 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  animation-delay: 0.2s;
-}
-
-.couple {
-  animation: bounceIn 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  animation-delay: 0.4s;
-}
-
-.subtitle {
-  animation: fadeBounce 0.8s ease both;
-  animation-delay: 0.6s;
-}
-
-.countdown-section {
-  animation: bounceUp 0.8s ease both;
-  animation-delay: 0.7s;
-}
-
-.event-date {
-  animation: fadeBounce 0.8s ease both;
-  animation-delay: 0.85s;
-}
-
-.open-btn {
-  animation: bounceIn 0.8s ease both;
-  animation-delay: 1s;
-}
-
-.countdown-box span {
-  animation: bouncePulse 2.4s ease-in-out infinite;
-}
-
-.countdown-box:nth-child(1) span { animation-delay: 0s; }
-.countdown-box:nth-child(2) span { animation-delay: 0.2s; }
-.countdown-box:nth-child(3) span { animation-delay: 0.4s; }
-.countdown-box:nth-child(4) span { animation-delay: 0.6s; }
-
-.card {
-  animation: fadeBounce 0.7s ease both;
-}
-
-.action-btn {
-  animation: bounceIn 0.7s ease both;
-}
-
-.gallery-grid img {
-  animation: fadeBounce 0.6s ease both;
-}
-
-.gallery-grid img:nth-child(1) { animation-delay: 0.1s; }
-.gallery-grid img:nth-child(2) { animation-delay: 0.2s; }
-.gallery-grid img:nth-child(3) { animation-delay: 0.3s; }
-.gallery-grid img:nth-child(4) { animation-delay: 0.4s; }
-
+/* ===== BOTTOM NAV ===== */
 .bottom-nav {
-  animation: bounceUp 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  position: fixed;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: min(92%, 360px);
+  background: linear-gradient(135deg, #c99a4a, #f2ddb0);
+  border-radius: 999px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  z-index: 20;
+  animation: fadeNavIn 0.8s ease both;
   animation-delay: 0.3s;
 }
 
-.cover-card {
-  animation: bounceIn 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+.nav-item {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #111;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+  animation: none !important;
+  opacity: 1 !important;
 }
 
-.music-btn {
-  animation: fadeBounce 0.8s ease both;
-  animation-delay: 1.2s;
+.nav-item:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.qris-img {
-  animation: bouncePulse 3s ease-in-out infinite;
-}
+/* ===== ANIMASI KEYFRAMES ===== */
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.85) translateY(30px); }
+  60%  { opacity: 1; transform: 
