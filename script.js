@@ -119,3 +119,28 @@ function sendRSVP(e) {
 
   window.open(`https://wa.me/6281234567890?text=${waMessage}`, "_blank");
 }
+// Scroll animation observer
+const animateOnScroll = () => {
+  const elements = document.querySelectorAll(
+    ".detail .card, .lokasi .card, .maps-preview, .gallery-grid img, .qris .card, .rsvp-form, .wishes .card"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = "fadeBounce 0.7s ease both";
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  elements.forEach((el) => {
+    el.style.opacity = "0";
+    observer.observe(el);
+  });
+};
+
+document.addEventListener("DOMContentLoaded", animateOnScroll);
