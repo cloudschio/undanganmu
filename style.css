@@ -317,19 +317,14 @@ body {
 
 /* ===== BOTTOM NAV ===== */
 .bottom-nav {
-  position: fixed;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
-  width: min(92%, 360px);
-  background: linear-gradient(135deg, #c99a4a, #f2ddb0);
-  border-radius: 999px;
-  padding: 10px 14px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  z-index: 20;
+  animation: fadeNavIn 0.8s ease both;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeNavIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
 }
 
 .nav-item {
